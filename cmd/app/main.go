@@ -32,8 +32,8 @@ func main() {
 			fmt.Println("messageType>>>", messageType)
 			fmt.Println(string(p))
 
-			if string(p) == "ping" {
-				if err := conn.WriteMessage(messageType, []byte("pong")); err != nil {
+			if string(p) == "ah-choo!" {
+				if err := conn.WriteMessage(messageType, []byte("bless you!")); err != nil {
 					fmt.Println("err on sending>>>", err.Error())
 					return
 				}
